@@ -1,0 +1,17 @@
+{
+    "name": "JSYG.Date",
+    "version": "0.1",
+    "authors" : ["Yannick Bochatay"],
+    "description" : "Manipulation of dates in JSYG framework. You can use it standalone.",
+  	"main": "Date.js",
+    "license": "MIT",
+  	"ignore": ["**/.*"],
+	"keywords": [
+		"svg",
+		"javascript",
+		"library",
+		"framework",
+		"jsyg",
+		"date"
+	]
+}
