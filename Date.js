@@ -1,4 +1,4 @@
-;(function() {
+;(function(root) {
 	
 	"use strict";
 	
@@ -75,7 +75,7 @@
 		     TZD  = time zone designator (Z or +hh:mm or -hh:mm)
 	 */
 	/**
-	 * Constructeur de dates JSYG
+	 * Constructeur de dates
 	 * @param arg mêmes arguments que le constructeur natif Date (mais <strong>janvier=1</strong> par défaut, modifiable par la propriété january) ou objet JDate ou objet Date
 	 * @returns {JDate}
 	 */
@@ -500,12 +500,11 @@
 			off : []
 		}
 	};
-		
-	if (!this.JSYG) this.JSYG = {};
 	
-	JSYG.Date = JDate;
+	if (typeof JSYG != "undefined") JSYG.Date = JDate;
 	
-	if (typeof module != "undefined") module.exports = JDate;
-	else if (typeof define == 'function' && define.amd) define([], function() { return JDate; });
+	if (typeof module === "object" && typeof module.exports === "object") module.exports = JDate;
+	else if (typeof define == 'function' && define.amd) define(function() { return JDate; });
+	else if (typeof JSYG == "undefined") root.JDate = JDate;
 	
 }).call(this);
