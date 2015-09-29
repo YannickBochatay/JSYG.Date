@@ -1,17 +1,28 @@
 {
-    "name": "JSYG.Date",
-    "version": "0.1",
+    "name": "jsyg-date",
     "authors" : ["Yannick Bochatay"],
-    "description" : "Manipulation of dates in JSYG framework. You can use it standalone.",
-  	"main": "Date.js",
+    "description" : "Dates constructor for JSYG framework or standalone",
+    "main": "JSYG.Date.js",
+    "moduleType": [
+        "amd",
+        "globals"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "qunit": "latest",
+        "requirejs": "latest",
+        "jsyg":"latest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/YannickBochatay/JSYG.Date.git"
+    },
     "license": "MIT",
-  	"ignore": ["**/.*"],
-	"keywords": [
-		"svg",
-		"javascript",
-		"library",
-		"framework",
-		"jsyg",
-		"date"
-	]
+    "ignore": ["**/.*","tests","bower_components","nbproject"],
+    "keywords": [
+        "date",
+        "jsyg",
+        "javascript",
+        "library"
+    ]
 }
