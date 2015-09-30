@@ -2,7 +2,7 @@ if (typeof require!= "undefined") {
     
     require.config({
         paths: {
-            "date": '../JSYG.Date'
+            "jsyg-date": '../JSYG.Date'
         },
         urlArgs: "bust=" + (+new Date())
     });
@@ -10,7 +10,7 @@ if (typeof require!= "undefined") {
 
 (function(factory) {
     
-    if (typeof define == 'function' && define.amd) define(["date"],factory);
+    if (typeof define == 'function' && define.amd) define(["jsyg-date"],factory);
     else factory(JDate);
     
 }(function(JDate) {

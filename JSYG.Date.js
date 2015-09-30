@@ -504,7 +504,7 @@
     if (typeof JSYG != "undefined") JSYG.Date = JDate;
 
     if (typeof module === "object" && typeof module.exports === "object") module.exports = JDate;
-    else if (typeof define == 'function' && define.amd) define(function() { return JDate; });
+    else if (typeof define == 'function' && define.amd) define("jsyg-date",function() { return JDate; });
     else if (typeof JSYG == "undefined") this.JDate = JDate;
 
 }).call(this);
