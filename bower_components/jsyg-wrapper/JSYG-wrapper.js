@@ -356,34 +356,6 @@
         }
     };
 	
-    $(function() {
-		
-        if (!svg || typeof document === "undefined") return false;
-		
-        var defs,use,
-        id = 'rect'+ Math.random().toString().replace( /\D/g, "" );
-		
-        defs = new JSYG('<defs>');
-        defs.appendTo(svg);
-		
-        new JSYG('<rect>')
-		.attr({"id":id,x:10,y:10,width:10,height:10})
-		.appendTo(defs);
-					
-        use = new JSYG('<use>').attr({id:"use",x:10,y:10,href:'#'+id}).appendTo(svg);
-					
-        document.body.appendChild(svg);
-					
-        JSYG.support.svgUseBBox = use[0].getBBox().x == 20;
-					
-        JSYG.support.svgUseTransform = use[0].getTransformToElement(svg).e !== 0;
-
-        use.remove();
-        defs.remove();			
-        document.body.removeChild(svg);
-		
-    });
-	
     JSYG.prototype.position = function() {
 		
         if (!this.isSVG()) return $.fn.position.call(this);

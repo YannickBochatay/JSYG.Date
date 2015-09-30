@@ -11,7 +11,7 @@
     "devDependencies": {
         "qunit": "latest",
         "requirejs": "latest",
-        "jsyg":"latest"
+        "jsyg-wrapper":"latest"
     },
     "repository": {
         "type": "git",
