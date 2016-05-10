@@ -20,7 +20,7 @@ bower install jsyg-date
 ```javascript
 import JDate from "jsyg-date"
 
-new JDate().add("");
+console.log( new JDate().add("1 month 2 seconds").toString() )
 ```
 
 ##### without bundler
