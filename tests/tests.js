@@ -30,7 +30,7 @@ if (typeof require!= "undefined") {
         equal( date.get("month"), 1, "récupération du mois");
         equal( date.get("year"), 2015, "récupération de l'année");
         
-        equal( date.add("1 month").get("month") , 2, "ajout d'un mois");
+        equal( date.add("1 month 2 seconds").get("month") , 2, "ajout d'un mois");
         equal( date.add("-1 day").get("month"), 1, "retrait d'un jour");
     });
     

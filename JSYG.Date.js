@@ -137,9 +137,9 @@
          */
         utc : false,
         /**
-         * Langue utilisée (parmi la liste JDate.languages)
+         * Langue utilisée (parmi la liste JDate.locale)
          */
-        lang : "fr",
+        locale : "fr",
         /**
          * Indice pour le mois de janvier (en javascript 0 par défaut)
          */
@@ -250,8 +250,8 @@
 
             format = format || "DAY D MONTH YEAR";
 
-            var lang = JDate.languages[this.lang];
-            if (!lang) throw new Error(this.lang+" : langue inconnue");
+            var locale = JDate.locale[this.locale];
+            if (!locale) throw new Error(this.locale+" : unknown locale");
 
             var jour = this.get("day"),
             mois = this.get("month"),
@@ -265,8 +265,8 @@
             replace = {
                 YYYY : annee,
                 YEAR : annee,
-                MONTH : lang.months[ this.date['get'+ (this.utc ? "UTC" : "") + "Month"]() ],
-                DAY : lang.days[ this.date['get'+ (this.utc ? "UTC" : "") + "Day"]() ],
+                MONTH : locale.months[ this.date['get'+ (this.utc ? "UTC" : "") + "Month"]() ],
+                DAY : locale.days[ this.date['get'+ (this.utc ? "UTC" : "") + "Day"]() ],
                 MSS : (millisecondes < 100 ? '0' : (millisecondes < 10) ? '0' : '') + millisecondes,
                 YY : annee.toString().substr(2),
                 MM : (mois < 10 ? '0' : '') + mois,
@@ -295,9 +295,9 @@
          */
         isOff : function() {
 
-            var lang = JDate.languages[this.lang];
-            if (!lang) throw new Error(this.lang+" : langue inconnue");
-            return lang.off.indexOf(this.toString("M-D")) !== -1;
+            var locale = JDate.locale[this.locale];
+            if (!locale) throw new Error(this.locale+" : unknown locale");
+            return locale.off.indexOf(this.toString("M-D")) !== -1;
         },
 
         /**
@@ -486,7 +486,7 @@
     /**
      * Liste des langues pour les dates
      */
-    JDate.languages = {
+    JDate.locale = {
 
         "fr" : {
             months : ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],

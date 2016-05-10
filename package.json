@@ -1,0 +1,34 @@
+{
+  "name": "jsyg-date",
+  "version": "0.1.3",
+  "description": "Dates constructor for JSYG framework or standalone",
+  "main": "JSYG.Date.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/YannickBochatay/JSYG.Date.git"
+  },
+  "keywords": [
+    "date",
+    "jsyg",
+    "javascript",
+    "library"
+  ],
+  "author": "Yannick Bochatay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YannickBochatay/JSYG.Date/issues"
+  },
+  "homepage": "https://github.com/YannickBochatay/JSYG.Date#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "qunit": "latest",
+    "requirejs": "latest"
+  }
+}
